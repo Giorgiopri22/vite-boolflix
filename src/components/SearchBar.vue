@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             store,
-            ricerca: "",
+            
         }
     },
     emits: ['submit'],
@@ -14,8 +14,8 @@ export default {
 </script>
 
 <template>
-    <form class="d-flex  " role="search">
-        <input class="form-control me-2 search w-75" type="search" placeholder="Search" v-model.trim="ricerca">
+    <form class=" d-flex  " role="search">
+        <input class="form-control me-2 search w-75" type="search" placeholder="Search" v-model.trim="store.ricerca">
         <button class="btn btn-outline-success" type="submit"
             @click.prevent="$emit('submit', ricerca)">Search</button>
     </form>
